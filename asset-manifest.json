@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/BC32_CapstoneReact/static/css/main.d36f60e4.css",
-    "main.js": "/BC32_CapstoneReact/static/js/main.207d7372.js",
+    "main.js": "/BC32_CapstoneReact/static/js/main.ee3be8b6.js",
     "static/js/787.8ce3a80e.chunk.js": "/BC32_CapstoneReact/static/js/787.8ce3a80e.chunk.js",
     "static/media/backapp.jpg": "/BC32_CapstoneReact/static/media/backapp.b46ef3a1ce082cecae80.jpg",
     "index.html": "/BC32_CapstoneReact/index.html",
     "main.d36f60e4.css.map": "/BC32_CapstoneReact/static/css/main.d36f60e4.css.map",
-    "main.207d7372.js.map": "/BC32_CapstoneReact/static/js/main.207d7372.js.map",
+    "main.ee3be8b6.js.map": "/BC32_CapstoneReact/static/js/main.ee3be8b6.js.map",
     "787.8ce3a80e.chunk.js.map": "/BC32_CapstoneReact/static/js/787.8ce3a80e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d36f60e4.css",
-    "static/js/main.207d7372.js"
+    "static/js/main.ee3be8b6.js"
   ]
 }
