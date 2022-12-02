@@ -1,0 +1,995 @@
+{
+   "statusCode": 200,
+   "message": "Xử lý thành công!",
+   "content": [
+      {
+         "maCumRap": "cgv-aeon-binh-tan",
+         "tenCumRap": "CGV - Aeon Bình Tân",
+         "diaChi": "Tầng 3, TTTM Aeon Mall Bình Tân, Số 1 đường số 17A, khu phố 11, Bình Trị Đông B, Bình Tân",
+         "danhSachRap": [
+            {
+               "maRap": 511,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 512,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 513,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 514,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 515,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 516,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 517,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 518,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 519,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 520,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-aeon-tan-phu",
+         "tenCumRap": "CGV - Aeon Tân Phú",
+         "diaChi": "30 Bờ Bao Tân Thắng, Sơn Kỳ, Tân Phú",
+         "danhSachRap": [
+            {
+               "maRap": 521,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 522,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 523,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 524,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 525,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 526,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 527,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 528,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 529,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 530,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-cgv-saigonres-nguyen-xi",
+         "tenCumRap": "CGV - CGV Saigonres Nguyễn Xí",
+         "diaChi": "Tầng 4-5, Saigonres Plaza, 79/81 Nguyễn Xí, P. 26, Bình Thạnh",
+         "danhSachRap": [
+            {
+               "maRap": 531,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 532,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 533,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 534,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 535,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 536,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 537,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 538,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 539,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 540,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-crescent-mall",
+         "tenCumRap": "CGV - Crescent Mall",
+         "diaChi": "Lầu 5, Crescent Mall, Đại lộ Nguyễn Văn Linh, Phú Mỹ Hưng, Q. 7",
+         "danhSachRap": [
+            {
+               "maRap": 541,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 542,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 543,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 544,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 545,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 546,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 547,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 548,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 549,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 550,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-ct-plaza",
+         "tenCumRap": "CGV - CT Plaza",
+         "diaChi": "60A Trường Sơn,P. 2, Tân Bình",
+         "danhSachRap": [
+            {
+               "maRap": 551,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 552,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 553,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 554,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 555,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 556,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 557,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 558,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 559,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 560,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-golden-plaza",
+         "tenCumRap": "CGV - Golden Plaza",
+         "diaChi": "Tầng 4, Trung tâm thương mại Golden Plaza, 922 Nguyễn Trãi, P. 14, Q. 5",
+         "danhSachRap": [
+            {
+               "maRap": 561,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 562,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 563,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 564,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 565,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 566,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 567,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 568,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 569,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 570,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-hoang-van-thu",
+         "tenCumRap": "CGV - Hoàng Văn Thụ",
+         "diaChi": "Tầng 1 và 2 Gala Center, 415 Hoàng Văn Thụ, P. 2, Tân Bình",
+         "danhSachRap": [
+            {
+               "maRap": 571,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 572,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 573,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 574,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 575,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 576,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 577,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 578,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 579,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 580,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-hung-vuong-plaza",
+         "tenCumRap": "CGV - Hùng Vương Plaza",
+         "diaChi": "Lầu 7, 126 Hùng Vương, Q. 5",
+         "danhSachRap": [
+            {
+               "maRap": 581,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 582,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 583,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 584,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 585,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 586,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 587,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 588,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 589,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 590,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-imc-tran-quang-khai",
+         "tenCumRap": "CGV - IMC Trần Quang Khải",
+         "diaChi": "T2&3, TTVH Đa Năng, 62 Trần Quang Khải, P.Tân Định, Q.1",
+         "danhSachRap": [
+            {
+               "maRap": 591,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 592,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 593,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 594,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 595,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 596,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 597,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 598,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 599,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 600,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-liberty-citypoint",
+         "tenCumRap": "CGV - Liberty Citypoint",
+         "diaChi": "Tầng M - 1, khách sạn Liberty Center Saigon Citypoint, 59 - 61 Pateur, Q. 1",
+         "danhSachRap": [
+            {
+               "maRap": 601,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 602,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 603,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 604,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 605,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 606,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 607,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 608,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 609,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 610,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-pandora-city",
+         "tenCumRap": "CGV - Pandora City",
+         "diaChi": "Lầu 3, Pandora City, 1/1 Trường Chinh, Tân Phú",
+         "danhSachRap": [
+            {
+               "maRap": 611,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 612,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 613,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 614,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 615,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 616,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 617,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 618,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 619,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 620,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-paragon",
+         "tenCumRap": "CGV - Paragon",
+         "diaChi": "Tầng 5, toà nhà Parkson Paragon, 03 Nguyễn Lương Bằng, Q. 7",
+         "danhSachRap": [
+            {
+               "maRap": 621,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 622,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 623,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 624,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 625,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 626,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 627,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 628,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 629,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 630,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-parkson-dong-khoi",
+         "tenCumRap": "CGV - Parkson Đồng Khởi",
+         "diaChi": "Tầng 5 Parkson Đồng Khởi, 35bis-45 Lê Thánh Tôn, Bến Nghé, Q.1",
+         "danhSachRap": [
+            {
+               "maRap": 631,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 632,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 633,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 634,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 635,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 636,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 637,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 638,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 639,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 640,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-pearl-plaza",
+         "tenCumRap": "CGV - Pearl Plaza",
+         "diaChi": "Lầu 5, Pearl Plaza, 561 Điện Biên Phủ, Bình Thạnh",
+         "danhSachRap": [
+            {
+               "maRap": 641,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 642,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 643,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 644,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 645,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 646,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 647,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 648,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 649,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 650,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-satra-cu-chi",
+         "tenCumRap": "CGV - Satra Củ Chi",
+         "diaChi": "T3, TTTM Satra Củ Chi, Số 1239, Tỉnh Lộ 8, Ấp Thạnh An, Trung An, Củ Chi, TP.HCM",
+         "danhSachRap": [
+            {
+               "maRap": 651,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 652,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 653,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 654,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 655,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 656,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 657,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 658,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 659,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 660,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-su-van-hanh",
+         "tenCumRap": "CGV - Sư Vạn Hạnh",
+         "diaChi": "T6 Vạn Hạnh Mall, 11 Sư Vạn Hạnh, Quận 10",
+         "danhSachRap": [
+            {
+               "maRap": 661,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 662,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 663,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 664,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 665,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 666,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 667,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 668,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 669,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 670,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-vincom-dong-khoi",
+         "tenCumRap": "CGV - Vincom Đồng Khởi",
+         "diaChi": "Tầng 3, TTTM Vincom Center B, 72 Lê Thánh Tôn, Bến Nghé, Q. 1",
+         "danhSachRap": [
+            {
+               "maRap": 671,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 672,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 673,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 674,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 675,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 676,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 677,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 678,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 679,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 680,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-vincom-go-vap",
+         "tenCumRap": "CGV - Vincom Gò Vấp",
+         "diaChi": "Tầng 5 TTTM Vincom Plaza Gò Vấp, 12 Phan Văn Trị, P. 7, Gò Vấp",
+         "danhSachRap": [
+            {
+               "maRap": 681,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 682,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 683,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 684,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 685,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 686,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 687,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 688,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 689,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 690,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-vincom-landmark-81",
+         "tenCumRap": "CGV - Vincom Landmark 81",
+         "diaChi": "T B1 , TTTM Vincom Center Landmark 81, 772 Điện Biên Phủ, P.22, Q. Bình Thạnh, HCM",
+         "danhSachRap": [
+            {
+               "maRap": 691,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 692,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 693,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 694,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 695,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 696,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 697,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 698,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 699,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 700,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-vincom-thu-duc",
+         "tenCumRap": "CGV - Vincom Thủ Đức",
+         "diaChi": "Tầng 5 Vincom Thủ Đức, 216 Võ Văn Ngân, Bình Thọ, Thủ Đức",
+         "danhSachRap": [
+            {
+               "maRap": 701,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 702,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 703,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 704,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 705,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 706,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 707,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 708,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 709,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 710,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      },
+      {
+         "maCumRap": "cgv-vivocity",
+         "tenCumRap": "CGV - VivoCity",
+         "diaChi": "Lầu 5, Trung tâm thương mại SC VivoCity - 1058 Nguyễn Văn Linh, Q. 7",
+         "danhSachRap": [
+            {
+               "maRap": 711,
+               "tenRap": "Rạp 1"
+            },
+            {
+               "maRap": 712,
+               "tenRap": "Rạp 2"
+            },
+            {
+               "maRap": 713,
+               "tenRap": "Rạp 3"
+            },
+            {
+               "maRap": 714,
+               "tenRap": "Rạp 4"
+            },
+            {
+               "maRap": 715,
+               "tenRap": "Rạp 5"
+            },
+            {
+               "maRap": 716,
+               "tenRap": "Rạp 6"
+            },
+            {
+               "maRap": 717,
+               "tenRap": "Rạp 7"
+            },
+            {
+               "maRap": 718,
+               "tenRap": "Rạp 8"
+            },
+            {
+               "maRap": 719,
+               "tenRap": "Rạp 9"
+            },
+            {
+               "maRap": 720,
+               "tenRap": "Rạp 10"
+            }
+         ]
+      }
+   ],
+   "dateTime": "2022-11-07T12:51:09.3578256+07:00",
+   "messageConstants": null
+}
