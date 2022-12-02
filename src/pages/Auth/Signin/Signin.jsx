@@ -34,9 +34,9 @@ const Signin = () => {
                <p className={styles.text}>
                   Enter your personal details and start journey with us
                </p>
-               <button className={styles.btnNavigate}>
-                  <Link to="/signup">sign Up</Link>
-               </button>
+               <Link to="/signup">
+                  <button className={styles.btnNavigate}>sign Up</button>
+               </Link>
             </div>
          </div>
       </div>

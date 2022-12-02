@@ -47,9 +47,9 @@ const Signup = () => {
                      To keep connected with us please login with your personal
                      info
                   </p>
-                  <button className={styles.btnNavigate}>
-                     <Link to="/signin">sign in</Link>
-                  </button>
+                  <Link to="/signin">
+                     <button className={styles.btnNavigate}>sign in</button>
+                  </Link>
                </div>
             </div>
          </div>

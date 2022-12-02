@@ -1,5 +1,5 @@
 // Import Library's Hook
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, createHashRouter } from "react-router-dom";
 
 // Import Components
 import RootLayout from "../layouts/RootLayout";
@@ -12,7 +12,7 @@ import Signin from "../pages/Auth/Signin";
 import Signup from "../pages/Auth/Signup";
 import NotFound from "../pages/NotFound";
 
-const routes = createBrowserRouter([
+const routes = createHashRouter([
    {
       path: "/",
       element: <RootLayout />,

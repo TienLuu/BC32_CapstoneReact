@@ -23,7 +23,7 @@ const Poster = () => {
                <div className={styles.wrapper}>
                   <div className={styles.movieImg}>
                      <div>
-                        <img src="../images/movieBlack.jpg" alt="Black" />
+                        <img src="./images/movieBlack.jpg" alt="Black" />
                         <div
                            className={styles.btnTrailer}
                            onClick={handleClickTrailer}

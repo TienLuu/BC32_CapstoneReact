@@ -208,16 +208,16 @@ export default function PrimarySearchAppBar({ window }) {
                         </Box> */}
 
                         <Box sx={{ display: { xs: "none", md: "flex" } }}>
-                           <IconButton
-                              size="large"
-                              edge="end"
-                              color="inherit"
-                              className={styles.signin}
-                           >
-                              <Link to="/signin">
+                           <Link to="/signin">
+                              <IconButton
+                                 size="large"
+                                 edge="end"
+                                 color="inherit"
+                                 className={styles.signin}
+                              >
                                  <span>Sign in</span>
-                              </Link>
-                           </IconButton>
+                              </IconButton>
+                           </Link>
                         </Box>
 
                         {/* Toggle Info user*/}

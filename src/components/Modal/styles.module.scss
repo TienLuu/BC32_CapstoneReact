@@ -85,7 +85,6 @@
 }
 
 .body {
-   overflow: auto;
    position: relative;
    height: 100%;
 }
@@ -95,7 +94,12 @@
    justify-content: flex-end;
    align-items: center;
    border-top: 1px solid rgb(229, 229, 229);
+   background-color: #fff;
    padding: 0.5rem 1.25rem;
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
 
    button {
       border: 1px solid;

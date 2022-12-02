@@ -77,12 +77,12 @@ const Footer = () => {
                      <div className={styles.downloadIcon}>
                         <div>
                            <a href="#11">
-                              <img src="../images/app-1.jpg" alt="Android" />
+                              <img src="./images/app-1.jpg" alt="Android" />
                            </a>
                         </div>
                         <div>
                            <a href="#1">
-                              <img src="../images/app-2.jpg" alt="IOS" />
+                              <img src="./images/app-2.jpg" alt="IOS" />
                            </a>
                         </div>
                      </div>

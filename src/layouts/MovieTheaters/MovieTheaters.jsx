@@ -44,7 +44,7 @@ const MovieTheaters = () => {
             >
                <SwiperSlide className="movieTheaters-item">
                   <MovieTheater
-                     logo="../images/dexuat-icon.svg"
+                     logo="./images/dexuat-icon.svg"
                      maHeThongRap="Tất cả"
                      setActive={handleClick}
                      isActive={"Tất cả" === activeId || !activeId}
