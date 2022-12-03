@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/BC32_CapstoneReact/static/css/main.71feb544.css",
-    "main.js": "/BC32_CapstoneReact/static/js/main.1a813a7e.js",
+    "main.css": "/BC32_CapstoneReact/static/css/main.98af447f.css",
+    "main.js": "/BC32_CapstoneReact/static/js/main.ec1b8425.js",
     "static/js/787.8ce3a80e.chunk.js": "/BC32_CapstoneReact/static/js/787.8ce3a80e.chunk.js",
-    "static/media/backapp.jpg": "/BC32_CapstoneReact/static/media/backapp.b46ef3a1ce082cecae80.jpg",
     "index.html": "/BC32_CapstoneReact/index.html",
-    "main.71feb544.css.map": "/BC32_CapstoneReact/static/css/main.71feb544.css.map",
-    "main.1a813a7e.js.map": "/BC32_CapstoneReact/static/js/main.1a813a7e.js.map",
+    "main.98af447f.css.map": "/BC32_CapstoneReact/static/css/main.98af447f.css.map",
+    "main.ec1b8425.js.map": "/BC32_CapstoneReact/static/js/main.ec1b8425.js.map",
     "787.8ce3a80e.chunk.js.map": "/BC32_CapstoneReact/static/js/787.8ce3a80e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.71feb544.css",
-    "static/js/main.1a813a7e.js"
+    "static/css/main.98af447f.css",
+    "static/js/main.ec1b8425.js"
   ]
 }
