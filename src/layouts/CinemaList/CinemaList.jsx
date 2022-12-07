@@ -1,19 +1,18 @@
-// Import Library's Hook
-import { useState } from "react";
-
 // Import Component
 import CinemaItem from "./CinemeItem";
 
 // Import Module Css
 import styles from "./styles.module.scss";
-import dscumrapcgv from "../../data/dscumrapcgv.json";
 
-const CinemaList = ({ onSelect }) => {
-   const newDSCumRapCgv = [...dscumrapcgv.content];
-   const [activeId, setActiveId] = useState();
-
-   const handleClick = (cinemaId) => {
-      setActiveId(cinemaId);
+const CinemaList = ({
+   cinemaCluster,
+   onSelectCinemaBranch,
+   onSelect,
+   cinemaBranchId,
+}) => {
+   const handleSelectCinema = (cinemaBranchId) => {
+      onSelect();
+      onSelectCinemaBranch(cinemaBranchId);
    };
 
    return (
@@ -22,16 +21,17 @@ const CinemaList = ({ onSelect }) => {
             <div className={styles.inputSearch}>
                <input type="text" placeholder="Tìm tên theo rạp ..." />
             </div>
-            {newDSCumRapCgv.map((item, index) => (
-               <CinemaItem
-                  key={index}
-                  cinema={item}
-                  setActive={handleClick}
-                  isActive={
-                     item.maCumRap === activeId || (index === 0 && !activeId)
-                  }
-               />
-            ))}
+            {!cinemaCluster
+               ? ""
+               : cinemaCluster.lstCumRap.map((item) => (
+                    <CinemaItem
+                       key={item.maCumRap}
+                       cinemaBranch={item}
+                       logo={cinemaCluster.logo}
+                       onSelect={handleSelectCinema}
+                       isActive={item.maCumRap === cinemaBranchId}
+                    />
+                 ))}
          </div>
       </>
    );

@@ -137,16 +137,16 @@ ul {
    right: 15px;
 }
 
-.movieTheaters-slide.swiper .movieTheaters-item {
+.movieClusters-slide.swiper .movieClusters-item {
    width: 4rem !important;
 }
 
-.movieTheaters-slide .swiper-button-next.swiper-button-disabled,
-.movieTheaters-slide .swiper-button-prev.swiper-button-disabled {
+.movieClusters-slide .swiper-button-next.swiper-button-disabled,
+.movieClusters-slide .swiper-button-prev.swiper-button-disabled {
    opacity: 0;
 }
 
-.movieTheaters-slide.swiper .swiper-button-next {
+.movieClusters-slide.swiper .swiper-button-next {
    background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 0) 0,
@@ -162,7 +162,7 @@ ul {
    color: rgb(115, 115, 115);
 }
 
-.movieTheaters-slide.swiper .swiper-button-prev {
+.movieClusters-slide.swiper .swiper-button-prev {
    background: linear-gradient(
       -90deg,
       rgba(255, 255, 255, 0) 0,
@@ -178,8 +178,8 @@ ul {
    color: rgb(115, 115, 115);
 }
 
-.movieTheaters-slide.swiper .swiper-button-prev::after,
-.movieTheaters-slide.swiper .swiper-button-next::after {
+.movieClusters-slide.swiper .swiper-button-prev::after,
+.movieClusters-slide.swiper .swiper-button-next::after {
    font-size: 1.25rem;
    color: rgba(115, 115, 115, 0.6);
 }
@@ -229,18 +229,6 @@ ul {
 .movieSchedule-slide.swiper .swiper-button-next::after {
    font-size: 1.4rem;
    color: rgba(255, 102, 0, 0.6);
-}
-
-/*
-=============================================
-            TICKETBOOKING INPUT
-=============================================
-*/
-#demo-select-small {
-   display: flex;
-   align-items: center;
-
-   font-size: 14px;
 }
 
 /*
@@ -348,45 +336,8 @@ ul {
       }
    }
 
-   // .itemBand {
-   //    position: absolute;
-   //    top: 12px;
-   //    right: 9px;
-   //    width: 28px;
-   //    height: 28px;
-   //    border-radius: 50%;
-   //    border: 1px solid #ff6600;
-
-   //    font-size: 12px;
-   //    font-weight: 500;
-   //    color: #fff;
-   //    line-height: 28px;
-   // }
-
    .itemBody {
       margin-top: 1rem;
-
-      // .itemRating {
-      //    unicode-bidi: bidi-override;
-      //    //  direction: rtl;
-
-      //    //  & > span:hover:before,
-      //    //  & > span:hover ~ span:before {
-      //    //     content: "\2605";
-      //    //     position: absolute;
-      //    //  }
-
-      //    span {
-      //       margin: 0 2px;
-      //       background: transparent;
-      //    }
-
-      //    & > span:not(:nth-child(5))::before {
-      //       content: "\2605";
-      //       position: absolute;
-      //       color: #ff6600;
-      //    }
-      // }
 
       .itemTitle {
          h3 {

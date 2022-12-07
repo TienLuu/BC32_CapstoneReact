@@ -3,13 +3,24 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+// Import Library's Hook
+import { Provider } from "react-redux";
+
+// Import Store Redux
+import store from "./store";
+
+// Import CSS
 import "swiper/css";
 import "swiper/css/bundle";
 import "swiper/css/pagination";
 import "./assets/styles.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+root.render(
+   <Provider store={store}>
+      <App />
+   </Provider>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

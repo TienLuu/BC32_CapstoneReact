@@ -91,6 +91,16 @@
          }
       }
    }
+
+   .errorMess {
+      display: block;
+      width: 100%;
+      font-size: 0.75rem;
+      color: red;
+      text-align: left;
+      position: relative;
+      top: -10px;
+   }
 }
 
 .signinRight {

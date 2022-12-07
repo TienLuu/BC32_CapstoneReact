@@ -1,4 +1,8 @@
+// Import Library's Hook
+import { Link } from "react-router-dom";
+
 // Import Library's Component
+import cn from "classnames";
 import Container from "@mui/material/Container";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import PinterestIcon from "@mui/icons-material/Pinterest";
@@ -16,9 +20,9 @@ const Footer = () => {
                <div className={styles.main}>
                   <div className={`${styles.footerItem} ${styles.contact}`}>
                      <h2>
-                        <a href="#1">
+                        <Link to="/">
                            <strong>watch</strong>trailer
-                        </a>
+                        </Link>
                      </h2>
                      <ul>
                         <li>
@@ -71,18 +75,29 @@ const Footer = () => {
                         </li>
                      </ul>
                   </div>
-                  <div className={`${styles.footerItem} ${styles.download}`}>
+                  <div
+                     className={cn({
+                        [styles.footerItem]: true,
+                        [styles.download]: true,
+                     })}
+                  >
                      <h2>GET YOUR APP NOW</h2>
                      <p>Dowload App And Get Free Movie Ticket !</p>
                      <div className={styles.downloadIcon}>
                         <div>
                            <a href="#11">
-                              <img src="./images/app-1.jpg" alt="Android" />
+                              <img
+                                 src="https://res.cloudinary.com/dzzfmvtiu/image/upload/v1670044334/movie-ticketbooking/app-android_zqzfls.jpg"
+                                 alt="Android"
+                              />
                            </a>
                         </div>
                         <div>
                            <a href="#1">
-                              <img src="./images/app-2.jpg" alt="IOS" />
+                              <img
+                                 src="https://res.cloudinary.com/dzzfmvtiu/image/upload/v1670044335/movie-ticketbooking/app-ios_mejs56.jpg"
+                                 alt="IOS"
+                              />
                            </a>
                         </div>
                      </div>

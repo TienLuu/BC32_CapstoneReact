@@ -1,19 +1,59 @@
 // Import Library's Hook
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Import Components
-import MovieSchedule from "../../../layouts/MovieSchedule";
 import MovieTheaters from "../../../layouts/MovieTheaters";
 import CinemaSelect from "../CinemaSelect";
+import Empty from "../../../layouts/Empty/Empty";
 
 // Import Module Css
 import styles from "./styles.module.scss";
 
-const ShowTimes = () => {
-   const [activeIdParent, setActiveIdParent] = useState();
+const ShowTimes = ({ movieShowTimes }) => {
+   const [cinemaShowtimes, setCinemaShowtimes] = useState([]);
+   const [cinemaClusterId, setCinemaClusterId] = useState();
+   const [cinemaBranchSelected, setCinemaBranchSelected] = useState();
 
-   const handleSelect = (activeId) => {
-      setActiveIdParent(activeId);
+   useEffect(() => {
+      try {
+         if (!movieShowTimes) return;
+
+         // Find cinema cluster by movie is selected
+         const cinemaClusterExist = movieShowTimes.heThongRapChieu.filter(
+            (item) => item.maHeThongRap === cinemaClusterId
+         );
+
+         if (cinemaClusterExist.length !== 0) {
+            // Update cinem show times
+            setCinemaShowtimes(cinemaClusterExist);
+
+            // Set cinem branch is selected at position 0
+            setCinemaBranchSelected(cinemaClusterExist[0].cumRapChieu[0]);
+         } else {
+            setCinemaShowtimes([]);
+            setCinemaBranchSelected([]);
+         }
+      } catch (error) {
+         console.log(error);
+      }
+   }, [cinemaClusterId, movieShowTimes]);
+
+   // Update cinema cluster is selected at position 0
+   const handleInitialCinemaCluster = (cinemaClusterId) => {
+      setCinemaClusterId(cinemaClusterId);
+   };
+
+   // Update cinema branch is selected
+   const handleSelectCinemaBranch = (cinemaBranchId) => {
+      const cinemaBranch = cinemaShowtimes[0].lstCumRap.find(
+         (item) => item.maCumRap === cinemaBranchId
+      );
+      setCinemaBranchSelected(cinemaBranch);
+   };
+
+   // Update cinema cluster is selected
+   const handleSelectCinemaCluster = (cinemaClusterId) => {
+      setCinemaClusterId(cinemaClusterId);
    };
 
    return (
@@ -25,32 +65,28 @@ const ShowTimes = () => {
                </div>
 
                <div className={styles.showTimeDetail}>
-                  <MovieSchedule
-                     rb={{
-                        0: { slidesPerView: 3 },
-                        330: { slidesPerView: 4 },
-                        400: { slidesPerView: 5 },
-                        470: {
-                           slidesPerView: 6,
-                        },
-                        560: {
-                           slidesPerView: 7,
-                        },
-                     }}
+                  <MovieTheaters
+                     onSelect={handleSelectCinemaCluster}
+                     initialCinemaCluster={handleInitialCinemaCluster}
                   />
-
-                  <MovieTheaters />
                   <div className={styles.cinemaSelectGroup}>
-                     <CinemaSelect
-                        activeId={0}
-                        setActive={handleSelect}
-                        isActive={activeIdParent === 0}
-                     />
-                     <CinemaSelect
-                        activeId={1}
-                        setActive={handleSelect}
-                        isActive={activeIdParent === 1}
-                     />
+                     {!cinemaShowtimes[0] ? (
+                        <Empty />
+                     ) : (
+                        cinemaShowtimes[0].cumRapChieu.map((item) => (
+                           <CinemaSelect
+                              key={item.maCumRap}
+                              logo={cinemaShowtimes[0].logo}
+                              cinemaBranch={item}
+                              onSelectCinemaBranch={handleSelectCinemaBranch}
+                              isActive={
+                                 item.maCumRap ===
+                                    cinemaBranchSelected.maCumRap ||
+                                 !cinemaBranchSelected
+                              }
+                           />
+                        ))
+                     )}
                   </div>
                </div>
             </div>

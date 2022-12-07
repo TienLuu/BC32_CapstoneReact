@@ -1,18 +1,25 @@
+// Import Library's Component
+import cn from "classnames";
+
 // Import Custom Hook
 import useBodyScroll from "../../hooks/useBodyScroll";
 
-// Import Module Css
-import styles from "./styles.module.scss";
+// Import Util
 import getVideoId from "../../utils/EmbedVideo";
 
-const ModalVideo = ({ isOpen, onClose, url }) => {
+// Import Module Css
+import styles from "./styles.module.scss";
+
+const ModalVideo = ({ isOpen, onClose, url, title, desc }) => {
+   // Disable scroll
    useBodyScroll(isOpen);
 
+   // Get embedID from youtube url
    const videoId = getVideoId(url);
 
    return (
       <>
-         <div className={`${styles.popup} ${isOpen ? `${styles.active}` : ""}`}>
+         <div className={cn({ [styles.popup]: true, [styles.active]: isOpen })}>
             <div className={styles.modal}>
                <button className={styles.close} onClick={() => onClose()}>
                   <svg
@@ -47,17 +54,9 @@ const ModalVideo = ({ isOpen, onClose, url }) => {
                      )}
                   </div>
                   <div className={styles.text}>
-                     <h1>Chiến Binh Báo Đen 2: Wakanda Bất Diệt</h1>
+                     <h1>{title}</h1>
                      <span>- Khoa Học Viễn Tưởng, Phiêu Lưu, Hành Động</span>
-                     <p>
-                        Nữ hoàng Ramonda, Shuri, M’Baku, Okoye và Dora Milaje
-                        chiến đấu để bảo vệ quốc gia của họ khỏi sự can thiệp
-                        của các thế lực thế giới sau cái chết của Vua T’Challa.
-                        Khi người Wakanda cố gắng nắm bắt chương tiếp theo của
-                        họ, các anh hùng phải hợp tác với nhau với sự giúp đỡ
-                        của War Dog Nakia và Everett Ross và tạo ra một con
-                        đường mới cho vương quốc Wakanda.
-                     </p>
+                     <p>{desc}</p>
                   </div>
                </div>
                <div className={styles.footer}>

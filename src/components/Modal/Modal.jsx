@@ -1,3 +1,6 @@
+// Import Library's Component
+import cn from "classnames";
+
 // Import Custom Hook
 import useBodyScroll from "../../hooks/useBodyScroll";
 
@@ -5,11 +8,12 @@ import useBodyScroll from "../../hooks/useBodyScroll";
 import styles from "./styles.module.scss";
 
 const Modal = ({ title, isOpen, onClose, children }) => {
+   // Disable scroll
    useBodyScroll(isOpen);
 
    return (
       <>
-         <div className={`${styles.popup} ${isOpen ? `${styles.active}` : ""}`}>
+         <div className={cn({ [styles.popup]: true, [styles.active]: isOpen })}>
             <div className={styles.modal}>
                <button className={styles.close} onClick={() => onClose()}>
                   <span>X</span>

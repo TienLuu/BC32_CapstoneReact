@@ -1,16 +1,30 @@
 // Import Library's Hook
 import { useState } from "react";
 
+// Import Library's Component
+import cn from "classnames";
+
 // Import Components
 import ModalVideo from "../../../layouts/ModalVideo";
+import Loading from "../../../layouts/Loading";
+
+// Import Services
+import formatDate from "../../../utils/formatDate";
 
 // Import Module Css
 import styles from "./styles.module.scss";
 
-const Poster = () => {
+const Poster = ({ movieInfor }) => {
    const [isFullPara, setIsFullPara] = useState(false);
    const [isOpenModal, setIsOpenModal] = useState(false);
 
+   if (!movieInfor) return <Loading />;
+
+   // Format show times and description
+   const { day, month, year } = formatDate(movieInfor.ngayKhoiChieu);
+   const shortDesc = movieInfor.moTa.substring(0, movieInfor.moTa.length - 60);
+
+   // Open Modal Video
    const handleClickTrailer = () => {
       setIsOpenModal(!isOpenModal);
    };
@@ -23,7 +37,7 @@ const Poster = () => {
                <div className={styles.wrapper}>
                   <div className={styles.movieImg}>
                      <div>
-                        <img src="./images/movieBlack.jpg" alt="Black" />
+                        <img src={movieInfor.hinhAnh} alt={movieInfor.maPhim} />
                         <div
                            className={styles.btnTrailer}
                            onClick={handleClickTrailer}
@@ -53,26 +67,23 @@ const Poster = () => {
                         <ModalVideo
                            isOpen={isOpenModal}
                            onClose={handleClickTrailer}
-                           url="https://www.youtube.com/embed/js7_OSmYDxg"
+                           url={movieInfor.trailer}
+                           desc={movieInfor.moTa}
+                           title={movieInfor.tenPhim}
                         />
                      </div>
                   </div>
                   <div className={styles.movieDescription}>
                      <div className={styles.ageLimit}>13+</div>
-                     <h1>Chiến Binh Báo Đen 2: Wakanda Bất Diệt</h1>
+                     <h1>{movieInfor.tenPhim}</h1>
                      <h3>Nội dung</h3>
-                     <div className={`${styles.text} ${styles.showMore}`}>
-                        {isFullPara
-                           ? `Nữ hoàng Ramonda, Shuri, M’Baku, Okoye và Dora Milaje
-                        chiến đấu để bảo vệ quốc gia của họ khỏi sự can thiệp
-                        của các thế lực thế giới sau cái chết của Vua T’Challa.
-                        Khi người Wakanda cố gắng nắm bắt chương tiếp theo của
-                        họ, các anh hùng phải hợp tác với nhau với sự giúp đỡ
-                        của War Dog Nakia và Everett Ross và tạo ra một con
-                        đường mới cho vương quốc Wakanda.`
-                           : `Nữ hoàng Ramonda, Shuri, M’Baku, Okoye và Dora Milaje
-                        chiến đấu để bảo vệ quốc gia của họ khỏi sự can thiệp
-                        của các thế lực thế giới sau cái chết của Vua T’Challa.`}
+                     <div
+                        className={cn({
+                           [styles.text]: true,
+                           [styles.showMore]: true,
+                        })}
+                     >
+                        {isFullPara ? movieInfor.moTa : shortDesc}
                         <span onClick={() => setIsFullPara(!isFullPara)}>
                            {isFullPara ? "Thu gọn" : "...Xem thêm"}
                         </span>
@@ -80,7 +91,7 @@ const Poster = () => {
                      <div className={styles.anotherDescription}>
                         <div className={styles.date}>
                            <p>Ngày chiếu</p>
-                           <span>11/11/2022</span>
+                           <span>{`${day}/${month}/${year}`}</span>
                         </div>
                         <div className={styles.type}>
                            <p>Thể loại</p>

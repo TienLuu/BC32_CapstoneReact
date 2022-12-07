@@ -7,6 +7,7 @@ import Select from "@mui/material/Select";
 const InputSelect = ({ itemName, sd, children, size }) => {
    const [itemSelect, setItemSelect] = React.useState("");
 
+   // Update value input
    const handleChange = (event) => {
       setItemSelect(event.target.value);
    };

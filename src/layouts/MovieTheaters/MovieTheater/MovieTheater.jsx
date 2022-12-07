@@ -1,19 +1,19 @@
 // Import Module Css
 import styles from "./styles.module.scss";
 
-const MovieTheater = ({ logo, maHeThongRap, isActive, setActive }) => {
+const MovieTheater = ({ logo, cinemaClusterId, isActive, setActive }) => {
    return (
       <>
          <div
             className={`${styles.movieTheaterInfor} ${
                isActive ? `${styles.active}` : ""
             } `}
-            onClick={() => setActive(maHeThongRap)}
+            onClick={() => setActive(cinemaClusterId)}
          >
             <div className={styles.image}>
-               <img src={logo} alt={maHeThongRap} />
+               <img src={logo} alt={cinemaClusterId} />
             </div>
-            <div className={styles.text}>{maHeThongRap}</div>
+            <div className={styles.text}>{cinemaClusterId}</div>
          </div>
       </>
    );

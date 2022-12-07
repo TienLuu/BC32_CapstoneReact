@@ -1,9 +1,9 @@
 // Import Library's Hook
-import { createBrowserRouter, createHashRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 
 // Import Components
 import RootLayout from "../layouts/RootLayout";
-import Homepage from "../pages/HomePage";
+import Home from "../pages/Home";
 import Movie from "../pages/Movie";
 import UserProtected from "./UserProtected";
 import Checkout from "../pages/Checkout";
@@ -18,7 +18,7 @@ const routes = createHashRouter([
       element: <RootLayout />,
       children: [
          // Homepage
-         { index: true, element: <Homepage /> },
+         { index: true, element: <Home /> },
 
          // Movie
          { path: "/movie/:movieId", element: <Movie /> },

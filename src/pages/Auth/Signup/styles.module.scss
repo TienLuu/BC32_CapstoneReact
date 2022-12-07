@@ -3,7 +3,7 @@
    justify-content: center;
    align-items: center;
    text-align: center;
-   height: 500px;
+   height: 580px;
    border-radius: 0.25rem;
    overflow: hidden;
 
@@ -72,18 +72,34 @@
       color: #262626;
    }
 
-   .checkboxContract {
+   .checkboxTerms {
       display: flex;
       align-items: center;
 
       input {
-         margin-right: 0.6rem;
+         margin-right: 0.5rem;
+         outline-offset: -1px;
+         outline-color: #ff6600;
       }
 
       label {
          font-size: 0.8125rem;
          cursor: pointer;
       }
+   }
+
+   .errorMess {
+      display: block;
+      width: 100%;
+      font-size: 0.75rem;
+      color: red;
+      text-align: left;
+      position: relative;
+      top: -10px;
+   }
+
+   .errorMess.checkboxError {
+      top: 0;
    }
 }
 

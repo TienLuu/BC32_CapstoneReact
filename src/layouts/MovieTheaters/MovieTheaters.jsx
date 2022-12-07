@@ -1,66 +1,91 @@
 // Import Library's Hook
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 
 // Import Components
 import MovieTheater from "./MovieTheater";
 
+// Import API Config
+import cinemaAPI from "../../services/cinemaAPI";
+
 // Import Module Css
 import styles from "./styles.module.scss";
-import heThongRap from "../../data/hethongrap.json";
 
-const MovieTheaters = () => {
-   const newHeThongRap = [...heThongRap.content];
+const MovieTheaters = ({ onSelect, initialCinemaCluster }) => {
+   const [cinemaClusters, setCinemaClusters] = useState([]);
    const [activeId, setActiveId] = useState();
 
-   const handleClick = (movieTheaterId) => {
-      setActiveId(movieTheaterId);
+   useEffect(() => {
+      (async () => {
+         try {
+            // Get movie theater list
+            const cinemaClusters = await cinemaAPI.getCinemaClusters();
+
+            // Set cinema cluster is active at position 0
+            initialCinemaCluster(cinemaClusters[0].maHeThongRap);
+
+            // Update cinema cluster list
+            setCinemaClusters(cinemaClusters);
+         } catch (error) {
+            console.log(error);
+         }
+      })();
+   }, []);
+
+   const handleSelect = (cinemaClusterId) => {
+      // Update cinema cluster list by movie cluster
+      onSelect(cinemaClusterId);
+
+      // Set cinema cluster is selected
+      setActiveId(cinemaClusterId);
    };
 
    return (
-      <div className={styles.movieTheaters}>
+      <div className={styles.movieClusters}>
          <div className={styles.container}>
-            <Swiper
-               breakpoints={{
-                  0: {
-                     slidesPerView: `${newHeThongRap.length - 2}` * 1,
-                  },
-                  380: {
-                     slidesPerView: `${newHeThongRap.length - 1}` * 1,
-                  },
-                  460: {
-                     slidesPerView: `${newHeThongRap.length}` * 1,
-                  },
-                  500: {
-                     slidesPerView: `${newHeThongRap.length + 1}` * 1,
-                  },
-               }}
-               spaceBetween={2}
-               speed={300}
-               navigation={true}
-               modules={[Navigation]}
-               className="movieTheaters-slide"
-            >
-               <SwiperSlide className="movieTheaters-item">
-                  <MovieTheater
-                     logo="./images/dexuat-icon.svg"
-                     maHeThongRap="Tất cả"
-                     setActive={handleClick}
-                     isActive={"Tất cả" === activeId || !activeId}
-                  />
-               </SwiperSlide>
-               {newHeThongRap.map((item, index) => (
-                  <SwiperSlide key={index} className="movieTheaters-item">
-                     <MovieTheater
-                        logo={item.logo}
-                        maHeThongRap={item.maHeThongRap}
-                        isActive={activeId === item.maHeThongRap}
-                        setActive={handleClick}
-                     />
-                  </SwiperSlide>
-               ))}
-            </Swiper>
+            {cinemaClusters.length !== 0 ? (
+               <Swiper
+                  breakpoints={{
+                     0: {
+                        slidesPerView: `${cinemaClusters.length - 2}` * 1,
+                     },
+                     380: {
+                        slidesPerView: `${cinemaClusters.length - 1}` * 1,
+                     },
+                     460: {
+                        slidesPerView: `${cinemaClusters.length}` * 1,
+                     },
+                     500: {
+                        slidesPerView: `${cinemaClusters.length + 1}` * 1,
+                     },
+                  }}
+                  spaceBetween={2}
+                  speed={300}
+                  navigation={true}
+                  modules={[Navigation]}
+                  className="movieClusters-slide"
+               >
+                  {cinemaClusters.map((item, index) => (
+                     <SwiperSlide
+                        key={item.maHeThongRap}
+                        className="movieClusters-item"
+                     >
+                        <MovieTheater
+                           logo={item.logo}
+                           cinemaClusterId={item.maHeThongRap}
+                           isActive={
+                              activeId === item.maHeThongRap ||
+                              (index === 0 && !activeId)
+                           }
+                           setActive={handleSelect}
+                        />
+                     </SwiperSlide>
+                  ))}
+               </Swiper>
+            ) : (
+               ""
+            )}
          </div>
       </div>
    );

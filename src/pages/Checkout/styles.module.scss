@@ -5,7 +5,7 @@
    min-height: 90vh;
    height: auto;
 
-   @media (min-width: 768px) {
+   @media (min-width: 960px) {
       height: 90vh;
    }
 
@@ -16,7 +16,7 @@
       flex-direction: column;
       height: 100%;
 
-      @media (min-width: 768px) {
+      @media (min-width: 960px) {
          flex-direction: row;
       }
    }

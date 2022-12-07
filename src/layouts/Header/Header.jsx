@@ -1,5 +1,6 @@
 // Import Library's Hook
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { ThemeProvider } from "@mui/material/styles";
 import { Link } from "react-router-dom";
 
@@ -23,19 +24,25 @@ import MenuIcon from "@mui/icons-material/Menu";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 
+// Import Slice
+import { logout } from "../../slices/authSlice";
+
 // Import Module Css
 import styles from "./styles.module.scss";
 import { theme } from "../../utils/styles";
 
-const navItems = ["LỊCH CHIẾU", "CỤM RẠP", "TIN TỨC", "ỨNG DỤNG"];
+const navItems = ["HOME", "SHOWTIMES", "NEWS", "CONTACT"];
 
 export default function PrimarySearchAppBar({ window }) {
    const [anchorEl, setAnchorEl] = useState(null);
    const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
    const [mobileOpen, setMobileOpen] = useState(false);
 
+   const { user } = useSelector((state) => state.auth);
+   const dispatch = useDispatch();
    const isMenuOpen = Boolean(anchorEl);
    const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
    // Get window
    const container =
       window !== undefined ? () => window().document.body : undefined;
@@ -57,6 +64,11 @@ export default function PrimarySearchAppBar({ window }) {
    const handleMenuClose = () => {
       setAnchorEl(null);
       handleMobileMenuClose();
+   };
+
+   const handleLogout = () => {
+      dispatch(logout());
+      handleMenuClose();
    };
 
    // Hanlde event click menu icon
@@ -82,8 +94,8 @@ export default function PrimarySearchAppBar({ window }) {
          open={isMenuOpen}
          onClose={handleMenuClose}
       >
-         <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
          <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+         <MenuItem onClick={handleLogout}>Logout</MenuItem>
       </Menu>
    );
 
@@ -105,19 +117,32 @@ export default function PrimarySearchAppBar({ window }) {
          open={isMobileMenuOpen}
          onClose={handleMobileMenuClose}
       >
-         <MenuItem onClick={handleProfileMenuOpen}>
-            <IconButton
-               size="large"
-               aria-label="account of current user"
-               aria-controls="primary-search-account-menu"
-               aria-haspopup="true"
-               color="inherit"
-               className={styles.userIcon}
-            >
-               <AccountCircle />
-            </IconButton>
-            <p>Kris Lưu</p>
-         </MenuItem>
+         {user ? (
+            <MenuItem onClick={handleProfileMenuOpen}>
+               <IconButton
+                  size="large"
+                  aria-label="account of current user"
+                  aria-controls="primary-search-account-menu"
+                  aria-haspopup="true"
+                  color="inherit"
+                  className={styles.userIcon}
+               >
+                  <AccountCircle />
+               </IconButton>
+               <p>{user.hoTen.split(" ").slice(-2).join(" ")}</p>
+            </MenuItem>
+         ) : (
+            <Link to="/signin" preventScrollReset={true}>
+               <IconButton
+                  size="large"
+                  edge="end"
+                  color="inherit"
+                  className={styles.signin}
+               >
+                  <span>Sign in</span>
+               </IconButton>
+            </Link>
+         )}
       </Menu>
    );
 
@@ -130,11 +155,13 @@ export default function PrimarySearchAppBar({ window }) {
          <Divider />
          <List>
             {navItems.map((item) => (
-               <ListItem key={item} disablePadding>
-                  <ListItemButton sx={{ textAlign: "center" }}>
-                     <ListItemText primary={item} />
-                  </ListItemButton>
-               </ListItem>
+               <Link key={item} to="/">
+                  <ListItem disablePadding>
+                     <ListItemButton sx={{ textAlign: "center" }}>
+                        <ListItemText primary={item} />
+                     </ListItemButton>
+                  </ListItem>
+               </Link>
             ))}
          </List>
       </Box>
@@ -168,7 +195,9 @@ export default function PrimarySearchAppBar({ window }) {
                            sx={{ display: { xs: "block" } }}
                            id={styles.navBrand}
                         >
-                           <strong>watch</strong>trailer
+                           <Link to="/">
+                              <strong>watch</strong>trailer
+                           </Link>
                         </Typography>
 
                         {/* Navigation item */}
@@ -177,7 +206,7 @@ export default function PrimarySearchAppBar({ window }) {
                            className={styles.navList}
                         >
                            {navItems.map((item) => (
-                              <Link to="/">
+                              <Link to="/" preventScrollReset={true}>
                                  <Button
                                     key={item}
                                     sx={{ color: "#000", mr: 1 }}
@@ -191,34 +220,38 @@ export default function PrimarySearchAppBar({ window }) {
 
                         {/* User Icon */}
                         <Box sx={{ flexGrow: 1 }} />
-                        {/* <Box sx={{ display: { xs: "none", md: "flex" } }}>
-                           <IconButton
-                              size="large"
-                              edge="end"
-                              aria-label="account of current user"
-                              aria-controls={menuId}
-                              aria-haspopup="true"
-                              onClick={handleProfileMenuOpen}
-                              color="inherit"
-                              className={styles.userIcon}
-                           >
-                              <AccountCircle />
-                              <span>Kris Lưu</span>
-                           </IconButton>
-                        </Box> */}
-
-                        <Box sx={{ display: { xs: "none", md: "flex" } }}>
-                           <Link to="/signin">
+                        {user ? (
+                           <Box sx={{ display: { xs: "none", md: "flex" } }}>
                               <IconButton
                                  size="large"
                                  edge="end"
+                                 aria-label="account of current user"
+                                 aria-controls={menuId}
+                                 aria-haspopup="true"
+                                 onClick={handleProfileMenuOpen}
                                  color="inherit"
-                                 className={styles.signin}
+                                 className={styles.userIcon}
                               >
-                                 <span>Sign in</span>
+                                 <AccountCircle />
+                                 <span>
+                                    {user.hoTen.split(" ").slice(-2).join(" ")}
+                                 </span>
                               </IconButton>
-                           </Link>
-                        </Box>
+                           </Box>
+                        ) : (
+                           <Box sx={{ display: { xs: "none", md: "flex" } }}>
+                              <Link to="/signin" preventScrollReset={true}>
+                                 <IconButton
+                                    size="large"
+                                    edge="end"
+                                    color="inherit"
+                                    className={styles.signin}
+                                 >
+                                    <span>Sign in</span>
+                                 </IconButton>
+                              </Link>
+                           </Box>
+                        )}
 
                         {/* Toggle Info user*/}
                         <Box sx={{ display: { xs: "flex", md: "none" } }}>

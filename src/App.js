@@ -1,7 +1,7 @@
 // Import Library's Hook
 import { RouterProvider } from "react-router-dom";
 
-// Import Components
+// Import Routes
 import routes from "./routers/routes";
 
 function App() {

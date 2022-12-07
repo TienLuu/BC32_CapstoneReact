@@ -19,8 +19,8 @@
    grid-template-columns: repeat(2, minmax(0, 1fr));
    justify-content: center;
 
-   @media (min-width: 420px) {
-      grid-template-columns: repeat(3, minmax(0, 200px));
+   @media (min-width: 550px) {
+      grid-template-columns: repeat(4, minmax(0, 200px));
    }
 
    span {
@@ -48,23 +48,23 @@
       margin-right: 9px;
    }
 
-   .seatEmpty {
-      grid-column: span 2 / span 2;
-      margin-top: 12px;
-
-      @media (min-width: 420px) {
-         grid-column: unset;
-         margin-top: 0;
-      }
-   }
-
-   .seatEmpty::before {
+   .seatNormal::before {
       content: "";
       display: inline-block;
       width: 14px;
       height: 14px;
 
-      background: var(--clr-border);
+      background: rgb(0, 125, 0);
+      margin-right: 9px;
+   }
+
+   .seatVip::before {
+      content: "";
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+
+      background: var(--clr-seatSelected);
       margin-right: 9px;
    }
 }
@@ -93,7 +93,7 @@
    .seatLine {
       position: relative;
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
+      grid-template-columns: repeat(16, 1fr);
       justify-content: center;
       align-items: center;
       gap: 0.25rem;
