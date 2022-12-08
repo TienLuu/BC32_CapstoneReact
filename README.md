@@ -8,7 +8,9 @@
    -  Web Admin : https://theater-admin.netlify.app
 -  Link Youtube : https://www.youtube.com/watch?v=i5GLZUoQLtc
 -  Link workflow: https://docs.google.com/spreadsheets/d/1AivRQUlwvf9QlYmqixkCvkoZVC4twyZEA-2aKiyzFXE/edit#gid=0
--  Link source: + Client: https://github.com/TienLuu/BC32_CapstoneReact + Admin: https://github.com/vxphat/ReactMovie
+-  Link source:
+   - Client: https://github.com/TienLuu/BC32_CapstoneReact
+   - Admin: https://github.com/vxphat/ReactMovie
  
 ### 👦**Account(admin) for testing**
 -  Username: tienluuadmin
