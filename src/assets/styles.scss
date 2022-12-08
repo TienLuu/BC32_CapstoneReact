@@ -113,30 +113,88 @@ ul {
 
 /*
 =============================================
-                    CAROUSEL
+            CONFIG SWIPER
 =============================================
 */
+// Carousel
+.swiper.carousel-slide .swiper-slide {
+   height: 40vh;
 
-.comingSoon__film.swiper.swiper-horizontal,
-.nowShowing__film.swiper.swiper-horizontal,
+   @media (min-width: 576px) {
+      height: 50vh;
+   }
+
+   @media (min-width: 992px) {
+      height: 78vh;
+   }
+}
+
+.swiper .swiper-pagination-bullets {
+   display: inline-block;
+}
+
 .carousel-slide.swiper.swiper-horizontal {
+   padding-left: 0;
+   padding-right: 0;
+   padding-bottom: 0;
+
+   & > .swiper-pagination-bullets,
+   .swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+      @media (min-width: 992px) {
+         bottom: 30px;
+      }
+
+      @media (min-width: 1200px) {
+         bottom: 40px;
+      }
+
+      @media (min-width: 1700px) {
+         bottom: 80px;
+      }
+   }
+
+   .swiper-pagination-bullets {
+      @media screen and (min-width: 768px) {
+         display: inline-block;
+      }
+   }
+}
+
+.swiper.carousel-slide .swiper-button-prev {
+   left: 15px;
+
+   @media (min-width: 576px) {
+      left: 30px;
+   }
+}
+
+.swiper.carousel-slide .swiper-button-next {
+   right: 15px;
+
+   @media (min-width: 576px) {
+      left: 30px;
+   }
+}
+
+// Film List
+.comingSoon__film.swiper.swiper-horizontal,
+.nowShowing__film.swiper.swiper-horizontal {
    padding-left: 0;
    padding-right: 0;
    padding-bottom: 0;
 }
 
-.swiper.carousel-slide .swiper-slide {
-   height: 40vh;
+.nowShowing__prev,
+.nowShowing__next,
+.comingSoon__prev,
+.comingSoon__next {
+   &.swiper-button-disabled {
+      opacity: 0.25;
+      cursor: default;
+   }
 }
 
-.swiper.carousel-slide .swiper-button-prev {
-   left: 15px;
-}
-
-.swiper.carousel-slide .swiper-button-next {
-   right: 15px;
-}
-
+// Ticket Booking
 .movieClusters-slide.swiper .movieClusters-item {
    width: 4rem !important;
 }
@@ -233,906 +291,14 @@ ul {
 
 /*
 =============================================
-               FILM LIST
-=============================================
-*/
-.filmList {
-   width: 100%;
-   padding: 40px 0;
-
-   .wrapper {
-      max-width: 72rem;
-      padding: 0 2rem;
-      margin: 0 auto;
-
-      h2 {
-         font-size: 1.6rem;
-         text-transform: uppercase;
-         margin-bottom: 2rem;
-         // text-align: center;
-
-         span {
-            color: #ff6600;
-         }
-
-         @media (max-width: 360px) {
-            font-size: 1.3rem;
-         }
-      }
-
-      .nowShowing,
-      .comingSoon {
-         position: relative;
-      }
-
-      .comingSoon {
-         margin-top: 60px;
-      }
-   }
-}
-
-.filmItem {
-   height: auto;
-   margin: 0 auto;
-   border-radius: 0.25rem;
-
-   // text-align: center;
-   overflow: hidden;
-
-   .itemHeading {
-      position: relative;
-      height: 310px;
-      border-radius: inherit;
-
-      overflow: hidden;
-      cursor: pointer;
-
-      @media (max-width: 360px) {
-         height: 220px;
-      }
-
-      &:hover {
-         .itemImage {
-            scale: 1.1;
-         }
-      }
-   }
-
-   .itemOverlay {
-      position: absolute;
-      inset: 0;
-      padding: 0.5rem;
-      background-color: transparent;
-      z-index: 20;
-
-      span {
-         display: inline-flex;
-         height: 1.25rem;
-         font-size: 0.75rem;
-         font-weight: 600;
-         line-height: 1rem;
-         color: rgba(255, 255, 255, 0.95);
-
-         border-radius: 0.125rem;
-         padding: 0 0.5rem;
-         align-items: center;
-         background-color: #9b2020;
-
-         &.under18 {
-            background-color: #e88021;
-         }
-      }
-   }
-
-   .itemImage {
-      height: inherit;
-      background-color: rgb(229, 229, 229);
-
-      transition: all 0.3s ease;
-
-      img {
-         width: 100%;
-         height: 100%;
-      }
-   }
-
-   .itemBody {
-      margin-top: 1rem;
-
-      .itemTitle {
-         h3 {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #292929;
-            text-transform: capitalize;
-
-            cursor: pointer;
-
-            @media (max-width: 360px) {
-               white-space: nowrap;
-               overflow: hidden;
-               text-overflow: ellipsis;
-            }
-         }
-      }
-
-      .itemSubtitle {
-         font-size: 0.8125rem;
-         color: rgb(163, 163, 163);
-         line-height: 1.25;
-         text-transform: capitalize;
-         margin-top: 0.25rem;
-      }
-   }
-}
-
-.filmNavigate {
-   position: absolute;
-   top: 35px;
-   right: 0;
-   width: fit-content;
-   display: flex;
-   align-items: center;
-   gap: 20px;
-
-   .arrowPrev,
-   .arrowNext {
-      color: #ff6600;
-      cursor: pointer;
-
-      svg {
-         font-size: 30px;
-         vertical-align: middle;
-      }
-
-      &.swiper-button-disabled {
-         opacity: 0.25;
-         cursor: default;
-      }
-   }
-
-   .arrowPrev {
-      transform: rotate(180deg);
-   }
-}
-
-/*
-=============================================
-               TICKET BOOKING
-=============================================
-*/
-.ticketBooking {
-   width: 100%;
-   background-color: #fffbf8;
-   overflow: hidden;
-
-   .wrapper {
-      width: 80%;
-
-      margin: 0 auto;
-      padding: 80px 0 80px;
-   }
-
-   .cinemaList {
-      display: grid;
-      gap: 10px;
-
-      width: 100%;
-      padding: 10px;
-
-      border-bottom: none;
-      background-color: #fffbf8;
-   }
-
-   .cinemaItem {
-      cursor: pointer;
-
-      img {
-         width: 60px;
-         height: 60px;
-      }
-
-      .cinemaItem__img {
-         display: flex;
-         align-items: center;
-         justify-content: center;
-
-         padding: 10px;
-         border-radius: 4px;
-         border: 1px solid rgb(230, 230, 230);
-      }
-
-      &.active,
-      &:hover,
-      &:focus {
-         .cinemaItem__img {
-            box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
-               0px 4px 5px 0px rgb(0 0 0 / 14%),
-               0px 1px 10px 0px rgb(0 0 0 / 12%);
-         }
-      }
-
-      &.active {
-         .cinemaItem__img {
-            border-color: #ff6600;
-         }
-      }
-   }
-
-   .cinemaInfo {
-      width: 100%;
-      height: auto;
-      display: flex;
-      flex-wrap: wrap;
-   }
-
-   .addressList {
-      flex-basis: 100%;
-      display: grid;
-      gap: 10px;
-      border-bottom: 1px solid rgb(230 230 230);
-   }
-
-   .addressListMobile {
-      display: none;
-
-      &.active {
-         display: block;
-      }
-   }
-
-   .addressItem {
-      display: flex;
-      padding: 10px;
-
-      transition: all 0.3s ease;
-      cursor: pointer;
-
-      .addressImage {
-         width: 60px;
-         margin-right: 10px;
-
-         img {
-            width: 100%;
-            height: 100%;
-         }
-      }
-
-      .addressDetails {
-         padding-left: 10px;
-         border-left: 2px solid rgb(230, 230, 230);
-
-         .heading span {
-            color: #ff6600;
-         }
-
-         span {
-            font-size: 12px;
-            color: #b3b3b3;
-         }
-
-         button {
-            display: flex;
-            align-items: center;
-            font-size: 12px;
-            background-color: transparent;
-            border: none;
-            margin-top: 5px;
-            color: #ff6600;
-
-            transition: color 0.3s ease;
-            cursor: pointer;
-
-            svg {
-               font-size: 12px;
-               margin-right: 2px;
-            }
-
-            &:hover {
-               color: rgb(124, 203, 242);
-            }
-         }
-      }
-
-      &:hover,
-      &:focus {
-         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-      }
-
-      &.active {
-         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-         border: 1px solid #ff6600;
-      }
-   }
-
-   .mobile {
-      .filmBookingList {
-         display: none;
-         margin-top: 10px;
-      }
-
-      &.active {
-         .filmBookingList {
-            display: block;
-         }
-
-         .addressItem {
-            border-color: #ff6600;
-         }
-      }
-   }
-
-   .filmBookingList {
-      flex-basis: 100%;
-      height: 700px;
-      overflow-y: scroll;
-
-      &::-webkit-scrollbar {
-         width: 3px;
-      }
-
-      &::-webkit-scrollbar-track {
-         background: #f0f0f0;
-      }
-
-      /* Handle */
-      &::-webkit-scrollbar-thumb {
-         background: #c9c9c9;
-      }
-
-      /* Handle on hover */
-      &::-webkit-scrollbar-thumb:hover {
-         background: #ff6600;
-      }
-   }
-
-   .filmBookingItem {
-      display: flex;
-      padding: 15px 0 20px;
-      margin-left: 15px;
-      border-bottom: 2px solid rgb(230 230 230);
-   }
-
-   .filmBookingItem__img {
-      width: 180px;
-      height: 230px;
-      margin-right: 20px;
-      box-shadow: 2px 2px 4px 0 rgb(0 0 0 / 25%);
-
-      img {
-         width: 100%;
-         height: 100%;
-      }
-   }
-
-   .filmBookingItem__details {
-      font-family: "OpenSans", "Helvetica", "Arial", sans-serif;
-
-      .heading {
-         & > p {
-            max-width: 400px;
-            font-size: 14px;
-            color: #ff6600;
-            letter-spacing: 0.5px;
-            line-height: 1.6;
-         }
-
-         h4 {
-            font-size: 24px;
-            font-weight: 400;
-            text-transform: capitalize;
-            line-height: 32px;
-            letter-spacing: 0.5px;
-         }
-
-         .rating {
-            display: flex;
-            align-items: center;
-
-            p {
-               line-height: 16px;
-               unicode-bidi: bidi-override;
-               //  direction: rtl;
-
-               //  & > span:hover:before,
-               //  & > span:hover ~ span:before {
-               //     content: "\2605";
-               //     position: absolute;
-               //  }
-
-               span {
-                  position: relative;
-                  font-size: 12px;
-                  margin-right: 2px;
-                  background: transparent;
-               }
-
-               & > span:not(:nth-child(5))::before {
-                  content: "\2605";
-                  font-size: nowrap;
-                  position: absolute;
-                  top: -1px;
-                  left: 0;
-                  color: #ff6600;
-               }
-            }
-         }
-
-         .calender {
-            font-size: 10px;
-            display: flex;
-            align-items: center;
-            margin-left: 15px;
-            line-height: 16px;
-            letter-spacing: 0.5px;
-
-            svg {
-               font-size: inherit;
-               margin-right: 5px;
-            }
-         }
-      }
-
-      .body {
-         width: 90%;
-
-         p {
-            font-size: 12px;
-            letter-spacing: 0.25px;
-            line-height: 1.6;
-         }
-
-         button {
-            display: flex;
-            background-color: transparent;
-            border: none;
-            font-size: 12px;
-            text-transform: uppercase;
-            color: #ff6600;
-            letter-spacing: 1.75px;
-            align-items: center;
-            line-height: 1.6;
-            cursor: pointer;
-
-            svg {
-               font-size: 12px;
-               margin-left: 10px;
-            }
-         }
-      }
-
-      .footer {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         width: 100%;
-         margin-top: 20px;
-
-         .viewingTimes {
-            flex-wrap: wrap;
-            display: flex;
-            align-items: center;
-
-            span {
-               font-size: 12px;
-               line-height: 24px;
-               display: flex;
-               align-items: center;
-
-               svg {
-                  font-size: 12px;
-                  margin-right: 3px;
-               }
-            }
-
-            .viewingTimes__details {
-               line-height: 24px;
-               display: flex;
-               flex-wrap: wrap;
-               align-items: center;
-               margin-left: 10px;
-
-               button {
-                  color: #717171;
-                  width: 57px;
-                  height: 36px;
-                  border-radius: 4px;
-                  border: none;
-
-                  margin-right: 10px;
-                  margin-bottom: 10px;
-
-                  transition: all 0.3s ease;
-                  cursor: pointer;
-
-                  &:hover {
-                     color: #fff;
-                     background-color: #ff6600;
-                  }
-
-                  &.disable {
-                     cursor: default;
-                     pointer-events: none;
-                     background-color: #f0f0f0;
-                     color: #c9c9c9;
-                  }
-               }
-            }
-         }
-
-         .lengthOfRecording {
-            font-size: 12px;
-            color: #979797;
-            text-transform: uppercase;
-            line-height: 1.6;
-            margin-right: 10px;
-
-            & > span:nth-child(1) {
-               margin-right: 3px;
-               font-weight: 400;
-            }
-
-            & > span:nth-child(2) {
-               display: inline-flex;
-               width: 22px;
-               height: 22px;
-               border-radius: 50%;
-               background-color: #4a4a4a;
-               color: #fff;
-               align-items: center;
-               justify-content: center;
-               padding-right: 2px;
-            }
-         }
-      }
-   }
-
-   .showHeThongRap {
-      position: relative;
-   }
-
-   .showAddressList {
-      position: relative;
-   }
-
-   .showFilmList {
-      position: relative;
-   }
-}
-
-.partnerNavigate {
-   width: fit-content;
-   display: flex;
-   align-items: center;
-   gap: 20px;
-
-   .arrowPrev,
-   .arrowNext {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      background-color: rgb(255, 255, 255, 1);
-
-      height: 100%;
-      color: rgb(255, 102, 0, 0.9);
-      z-index: 20;
-      cursor: pointer;
-
-      svg {
-         font-size: 50px;
-         vertical-align: middle;
-      }
-
-      &.swiper-button-disabled {
-         opacity: 0;
-         cursor: default;
-      }
-   }
-
-   .arrowNext {
-      right: 0;
-      box-shadow: -40px 0px 11px -3px rgb(255, 255, 255, 0.8);
-   }
-
-   .arrowPrev {
-      transform: rotate(180deg);
-      left: 0;
-      box-shadow: -40px 0px 11px -3px rgb(255, 255, 255, 0.8);
-   }
-}
-/*
-=============================================
                RESPONSIVE
 =============================================
 */
 
-@media screen and (min-width: 0px) {
-   // TicketBooking
-   .ticketBooking {
-      .cinemaList {
-         div {
-            margin-right: 0;
-         }
-
-         &.active {
-            display: grid;
-         }
-      }
-
-      .cinemaInfo {
-         border: none;
-      }
-
-      .addressList {
-         padding: 10px;
-
-         &.active {
-            display: grid;
-         }
-      }
-
-      .addressItem {
-         border: 1px solid rgb(230 230 230);
-         margin: 0;
-
-         .addressDetails {
-            .heading {
-               font-size: 14px;
-               margin-bottom: 3px;
-
-               span {
-                  font-size: 14px;
-               }
-            }
-
-            button {
-               display: none;
-            }
-         }
-      }
-
-      .filmBookingItem {
-         flex-wrap: wrap;
-      }
-
-      .filmBookingItem__details {
-         width: 100%;
-         margin-top: 10px;
-
-         .body {
-            margin-top: 20px;
-
-            button {
-               margin-top: 10px;
-            }
-         }
-
-         .footer {
-            .viewingTimes {
-               flex-basis: 95%;
-            }
-
-            .lengthOfRecording {
-               display: none;
-            }
-         }
-      }
-
-      .showHeThongRap {
-         display: block;
-      }
-
-      .showAddressList {
-         display: block;
-      }
-
-      .showFilmList {
-         display: block;
-      }
-   }
-}
-
 @media screen and (min-width: 576px) {
-   // Carousel
-   .swiper.carousel-slide .swiper-slide {
-      height: 50vh;
-   }
-
-   .swiper.carousel-slide .swiper-button-prev {
-      left: 30px;
-   }
-
-   .swiper.carousel-slide .swiper-button-next {
-      right: 30px;
-   }
-
    .MuiContainer-root,
    .MuiToolbar-root {
       padding-left: 16px !important;
       padding-right: 16px !important;
-   }
-
-   // TicketBooking
-   .ticketBooking {
-      .cinemaList {
-         display: grid;
-         grid-template-columns: repeat(2, 1fr);
-         border: 1px solid rgb(230 230 230);
-         border-bottom: none;
-      }
-
-      .cinemaInfo {
-         border: 1px solid rgb(230, 230, 230);
-      }
-
-      .addressList {
-         display: grid;
-         grid-template-columns: repeat(2, 1fr);
-         padding: 0;
-      }
-
-      .addressItem {
-         border: none;
-         margin: 5px 0;
-      }
-
-      .showHeThongRap {
-         display: none;
-      }
-
-      .showAddressList {
-         display: none;
-      }
-
-      .showFilmList {
-         display: none;
-      }
-   }
-}
-
-@media screen and (min-width: 768px) {
-   // Carousel
-   .swiper .swiper-pagination-bullets {
-      display: inline-block;
-   }
-
-   // TicketBooking
-   .ticketBooking {
-      .cinemaList {
-         grid-template-columns: repeat(3, 1fr);
-      }
-
-      .addressItem {
-         .addressDetails {
-            .heading {
-               font-size: 16px;
-               margin-bottom: 0;
-
-               span {
-                  font-size: 16px;
-               }
-            }
-
-            button {
-               display: block;
-            }
-         }
-      }
-
-      .filmBookingItem {
-         flex-wrap: nowrap;
-      }
-
-      .filmBookingItem__details {
-         width: 70%;
-         margin-top: 0;
-
-         .body {
-            margin-top: 25px;
-
-            button {
-               margin-top: 20px;
-            }
-         }
-      }
-   }
-}
-
-@media screen and (min-width: 992px) {
-   // Carousel
-   .swiper-horizontal > .swiper-pagination-bullets,
-   .swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
-      bottom: 30px;
-   }
-
-   .swiper.carousel-slide .swiper-slide {
-      height: 78vh;
-   }
-
-   // TicketBooking
-   .ticketBooking {
-      .cinemaList {
-         grid-template-columns: repeat(6, 1fr);
-      }
-
-      .filmBookingItem__details {
-         width: 75%;
-
-         .footer {
-            .viewingTimes {
-               flex-basis: 80%;
-            }
-
-            .lengthOfRecording {
-               display: block;
-            }
-         }
-      }
-   }
-}
-
-@media screen and (min-width: 1200px) {
-   // Carousel
-   .swiper-horizontal > .swiper-pagination-bullets,
-   .swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
-      bottom: 40px;
-   }
-
-   // TicketBooking
-   .ticketBooking {
-      .addressList {
-         grid-template-columns: repeat(3, 1fr);
-      }
-   }
-}
-
-@media screen and (min-width: 1400px) {
-}
-
-@media screen and (min-width: 1700px) {
-   // Carousel
-   .swiper-horizontal > .swiper-pagination-bullets,
-   .swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
-      bottom: 80px;
-   }
-
-   // FilmList
-   .filmList {
-      .wrapper {
-         width: 70%;
-      }
-   }
-
-   // TickeBooking
-   .ticketBooking {
-      .wrapper {
-         width: 72%;
-      }
-
-      .main {
-         .addressList {
-            flex-basis: 25%;
-         }
-
-         .filmList {
-            flex-basis: 75%;
-         }
-      }
-   }
-}
-
-@media screen and (min-width: 2000px) {
-   // TicketBooking Inuput
-   .ticketBooking {
-      .wrapper {
-         width: 60%;
-      }
-   }
-
-   // FilmList
-   .filmList {
-      .wrapper {
-         width: 60%;
-      }
    }
 }

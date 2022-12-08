@@ -1,19 +1,22 @@
-// Import Library's Hook
+// Import Library's Hooks
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 
-// Import Library's Component
+// Import Library's Components
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import cn from "classnames";
 
-const ComingSoon = ({ movies }) => {
+// Import Module Css
+import styles from "./styles.module.scss";
+
+const FilmSlide = ({ btnPrevclass, btnNextClass, swiperClass, movies }) => {
    return (
-      <>
+      <div>
          <Swiper
             navigation={{
-               prevEl: ".comingSoon__prev",
-               nextEl: ".comingSoon__next",
+               prevEl: `.${btnPrevclass}`,
+               nextEl: `.${btnNextClass}`,
             }}
             slidesPerView={2}
             spaceBetween={10}
@@ -33,27 +36,27 @@ const ComingSoon = ({ movies }) => {
                },
             }}
             modules={[Navigation]}
-            className="comingSoon__film"
+            className={swiperClass}
          >
             {movies.map((movie) => (
                <SwiperSlide key={movie.maPhim}>
                   <Link to={`/movie/${movie.maPhim}`}>
-                     <div className="filmItem">
-                        <div className="itemHeading">
-                           <div className="itemOverlay">
+                     <div className={styles.filmItem}>
+                        <div className={styles.itemHeading}>
+                           <div className={styles.itemOverlay}>
                               <span className={cn({ under18: !movie.hot })}>
                                  {movie.hot ? "18+" : "16+"}
                               </span>
                            </div>
-                           <div className="itemImage">
+                           <div className={styles.itemImage}>
                               <img src={movie.hinhAnh} alt={movie.tenPhim} />
                            </div>
                         </div>
-                        <div className="itemBody">
-                           <div className="itemTitle">
+                        <div className={styles.itemBody}>
+                           <div className={styles.itemTitle}>
                               <h3>{movie.tenPhim}</h3>
                            </div>
-                           <div className="itemSubtitle">
+                           <div className={styles.itemSubtitle}>
                               <span>Hành động, gay cấn</span>
                            </div>
                         </div>
@@ -62,17 +65,26 @@ const ComingSoon = ({ movies }) => {
                </SwiperSlide>
             ))}
          </Swiper>
-
-         <div className="filmNavigate">
-            <span className="arrowPrev comingSoon__prev">
+         <div className={styles.filmNavigate}>
+            <span
+               className={cn({
+                  [styles.arrowPrev]: true,
+                  [btnPrevclass]: true,
+               })}
+            >
                <ArrowRightAltIcon />
             </span>
-            <span className="arrowNext comingSoon__next">
+            <span
+               className={cn({
+                  [styles.arrowNext]: true,
+                  [btnNextClass]: true,
+               })}
+            >
                <ArrowRightAltIcon />
             </span>
          </div>
-      </>
+      </div>
    );
 };
 
-export default ComingSoon;
+export default FilmSlide;

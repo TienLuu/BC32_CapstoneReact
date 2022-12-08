@@ -27,6 +27,15 @@
       }
    }
 
+   input[type="text"],
+   input[type="password"],
+   textarea,
+   select {
+      &:focus {
+         font-size: 1rem;
+      }
+   }
+
    button {
       border: 1px solid #ff6600;
       background-color: #ff6600;

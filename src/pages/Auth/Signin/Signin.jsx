@@ -96,7 +96,10 @@ const Signin = () => {
                )}
                <div className={styles.lookingFor}>
                   <p>
-                     Forgot your password?<span> Or Resigter</span>
+                     Forgot your password?
+                     <Link to="/signup">
+                        <span> Or Resigter</span>
+                     </Link>
                   </p>
                </div>
                <button type="submit">sign in</button>

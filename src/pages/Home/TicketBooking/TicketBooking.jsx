@@ -9,7 +9,7 @@ import CinemaList from "../../../layouts/CinemaList";
 import MovieList from "../../../layouts/MovieList";
 import Modal from "../../../components/Modal";
 
-// Import API Config
+// Import Services
 import cinemaAPI from "../../../services/cinemaAPI";
 
 // Import Module Css
@@ -28,6 +28,7 @@ const TicketBooking = () => {
    useEffect(() => {
       (async () => {
          try {
+            // Get cinema show times list by cinema cluster id
             const cinemaShowtimes = await cinemaAPI.getCinemaShowtimes(
                cinemaClusterId
             );
@@ -36,20 +37,25 @@ const TicketBooking = () => {
                cinemaShowtimes[0].lstCumRap[0]
             );
 
+            // Update cinema show times
+            setCinemaShowtimes(cinemaShowtimes);
+
+            // Setup movie show time, cinema branch is selected at position 0
             setMovieShowtimes(movies);
             setCinemaBranchSelected(cinemaShowtimes[0].lstCumRap[0]);
-            setCinemaShowtimes(cinemaShowtimes);
          } catch (error) {
             console.log(error);
          }
       })();
    }, [cinemaClusterId]);
 
+   // Format show times
    const formatMovieShowTimes = (cinemaBranch) => {
       const movies = { ...cinemaBranch.danhSachPhim };
       let newMovies = [];
 
       for (const key in movies) {
+         // Format ngayChieuGiochieu
          const showtimes = movies[key].lstLichChieuTheoPhim.map((item) => {
             return {
                ...item,
@@ -66,25 +72,31 @@ const TicketBooking = () => {
       return newMovies;
    };
 
+   // Open/Close modal
    const handleSelect = () => {
       setIsOpenModal(!isOpenModal);
    };
 
+   // Closed modal when click cinema branch
    const handleSelectCinemaBranchInModal = () => {
       setIsOpenModal(false);
    };
 
    const handleSelectCinemaBranch = (cinemaBranchId) => {
+      // Find cinema branch is selected
       const cinemaBranch = cinemaShowtimes[0].lstCumRap.find(
          (item) => item.maCumRap === cinemaBranchId
       );
 
+      // Format show times
       const movies = formatMovieShowTimes(cinemaBranch);
 
-      setMovieShowtimes(movies);
+      // Update cinema branch's movie show times
       setCinemaBranchSelected(cinemaBranch);
+      setMovieShowtimes(movies);
    };
 
+   // Initialize the cinema value at position 0
    const handleInitialCinemaCluster = (cinemaClusterId) => {
       setCinemaClusterId(cinemaClusterId);
    };
