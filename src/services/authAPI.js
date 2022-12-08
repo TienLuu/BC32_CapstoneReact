@@ -8,7 +8,7 @@ const authAPI = {
    signup: (values) => {
       return fetcher.post("QuanLyNguoiDung/DangKy", {
          ...values,
-         maNhom: "GP15",
+         maNhom: "GP09",
       });
    },
 };

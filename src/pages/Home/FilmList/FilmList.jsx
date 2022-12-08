@@ -30,6 +30,7 @@ const FilmList = () => {
    const moviesCSoon = movies.filter(
       (movie) => movie.dangChieu === false && movie.sapChieu === true
    );
+   console.log(movies);
 
    return (
       <>

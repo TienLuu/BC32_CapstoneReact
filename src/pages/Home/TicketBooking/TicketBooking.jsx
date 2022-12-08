@@ -32,6 +32,7 @@ const TicketBooking = () => {
             const cinemaShowtimes = await cinemaAPI.getCinemaShowtimes(
                cinemaClusterId
             );
+            console.log(cinemaShowtimes);
 
             const movies = formatMovieShowTimes(
                cinemaShowtimes[0].lstCumRap[0]

@@ -21,7 +21,7 @@ const cinemaAPI = {
       return await fetcher.get("QuanLyRap/LayThongTinLichChieuHeThongRap", {
          params: {
             maHeThongRap: cinemaClusterId,
-            maNhom: "GP15",
+            maNhom: "GP09",
          },
       });
    },
